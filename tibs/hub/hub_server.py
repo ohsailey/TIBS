@@ -38,6 +38,7 @@ from hub import Hub
 
 
 app = Flask(__name__)
+app.config.from_object('hub_config')
 
 #Tip: Delegate function to Hub object
 
