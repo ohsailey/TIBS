@@ -125,7 +125,7 @@ def send_broker(msg):
 	channel.queue_declare(queue=broker_queue)
 	
 	channel.basic_publish(exchange='',
-                      routing_key='hellos',
+                      routing_key=broker_queue,
 					  body=msg)
                       #body=json.dumps(msg))
 	print " [x] Sent message"
