@@ -33,12 +33,18 @@
 #
 # -*-
 
-from flask import Flask
+from flask import Flask, request
 from hub import Hub
-
+import pika
 
 app = Flask(__name__)
 app.config.from_object('hub_config')
+
+broker_ip = app.config['RABBITMQ_HOST']
+broker_queue = app.config['QUEUE_NAME']
+hub_cache_path = app.config['HUB_CACHE_PATH']
+topic_file_format = app.config['TOPIC_FILE_FORMAT']
+
 
 #Tip: Delegate function to Hub object
 
@@ -60,19 +66,48 @@ def register_subscriber():
 @app.route("/create_topic", methods = ['POST'])
 def create_topic():
 	#3 send message (about topic's abstraction) to RabbitMQ server
+	'''ex:{
+		"topic_id" : "xxaa",
+		"pub_id" : "987456",
+	    "topic_description" : "",
+		"pub_key" : "asdfghjk123456"
+	}'''
+	topic_msg = request.args
+	if topic_msg.get("pub_key") in pub_key_list:
+		send_broker(topic_msg)
 	pass
 
 @app.route("/update_topic", methods = ['POST'])
 def update_topic():
 	#3 send message (about topic's change log) to RabbitMQ server
+	'''ex:{
+		"topic_id" : "xxaa",
+		"pub_id" : "987456",
+	    "update_description" : "",
+		"pub_key" : "asdfghjk123456",
+		"change_log" : ""
+	}'''
+	update_msg = request.args
+	
+	if update_msg.get("pub_key") in pub_key_list and update_msg.get("topic_id") in topic_id_list:
+		send_broker(update_msg)
 	pass
 
 @app.route("/upload_topic_content", methods = ['POST'])
 def upload_topic_content():
 	#4 one POST parameter is the upload key
 	# upload topic content
-	
-	pass
+	'''ex:{
+		"topic_id" : "xxaa",
+		"upload_key" : "qwertyuiop"
+	}'''
+	upload_msg = request.args
+	if upload_key in upload_key_list:
+		f = request.files['file']
+		filename = upload_msg.get('topic_id') + topic_file_format
+		f.save(filename)
+		return 'Receive success!!'
+	#pass
 
 @app.route("/subscribe_topic", methods = ['POST'])
 def subscribe_topic():
@@ -81,6 +116,19 @@ def subscribe_topic():
 @app.route("/get_topic_content", methods = ['POST'])
 def get_topic_content():
 	pass
+	def send_broker(msg):
+    connection = pika.BlockingConnection(pika.ConnectionParameters(
+        host = broker_ip))
+		
+	channel = connection.channel()
+	channel.queue_declare(queue=broker_queue)
+	
+	channel.basic_publish(exchange='',
+                      routing_key='hellos',
+					  body=msg)
+                      #body=json.dumps(msg))
+	print " [x] Sent message"
+	connection.close()
 
 
 
