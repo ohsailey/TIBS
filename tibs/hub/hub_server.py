@@ -104,8 +104,8 @@ def upload_topic_content():
 	upload_msg = request.args
 	if upload_key in upload_key_list:
 		f = request.files['file']
-		filename = upload_msg.get('topic_id') + topic_file_format
-		f.save(filename)
+		file_path = hub_cache_path + '/'+ upload_msg.get('topic_id') + topic_file_format
+		f.save(file_path)
 		return 'Receive success!!'
 	#pass
 
@@ -116,7 +116,8 @@ def subscribe_topic():
 @app.route("/get_topic_content", methods = ['POST'])
 def get_topic_content():
 	pass
-	def send_broker(msg):
+	
+def send_broker(msg):
     connection = pika.BlockingConnection(pika.ConnectionParameters(
         host = broker_ip))
 		
@@ -124,7 +125,7 @@ def get_topic_content():
 	channel.queue_declare(queue=broker_queue)
 	
 	channel.basic_publish(exchange='',
-                      routing_key='hellos',
+                      routing_key=broker_queue,
 					  body=msg)
                       #body=json.dumps(msg))
 	print " [x] Sent message"
