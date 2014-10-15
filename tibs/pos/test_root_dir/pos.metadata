@@ -1,0 +1,51 @@
+{
+"all_topics":[
+{
+"name":"Discover Taipei 英文版",
+"id":"2008600233",
+"detail":"每單月發行英文版2萬4,000冊、日文版1萬冊之《Discover Taipei》外文雙月刊，主要結合本府各局處推動政策，提供旅居本市的外籍人士及前來本市的外籍觀光客，有關臺北觀光旅遊、歷史文化、風土民情、社經發展及外僑生活資訊等報導，是外籍朋友認識臺北市的窗口。",
+"version":"1.2",
+"publisher":"觀光傳播局"
+},
+{
+"name":"臺北市市場處",
+"id":"2009701841",
+"detail":"透過每月出版月刊，為民眾介紹臺北市各零售市（商）場、批發市場、攤販集中場、地下街、公有民營超級市場、特色商圈之商情與活動資訊，增加各市集、商圈之到客率，促進商機。",
+"version":"2.0",
+"publisher":"臺北市市場處"
+}
+],
+
+"subscribe_dataset":[
+{
+"publisher_name":"publisher_1",
+"publusher_id":"000001",
+"publisher_topics":
+[{"topic_name":"topicA",
+  "topic_id":"001"},
+ {"topic_name":"topicB",
+  "topic_id":"002"},
+ {"topic_name":"topicC",
+  "topic_id":"003"}
+]
+},
+{
+"publisher_name":"publisher_2",
+"publusher_id":"000002",
+"publisher_topics":
+[{"topic_name":"topicD",
+  "topic_id":"004"}
+]
+},
+{
+"publisher_name":"publisher_3",
+"publusher_id":"000003",
+"publisher_topics":
+[{"topic_name":"topicE",
+  "topic_id":"005"},
+ {"topic_name":"topicF",
+  "topic_id":"006"}
+]
+}
+]
+}
