@@ -33,12 +33,15 @@
 #
 # -*-
 
+import json
+
 class Pos:
 
 	def __init__(self, root_path):
 
 		self.publishers = {}
 		self.root_path = root_path
+		self.metadata_loc = os.path.join(self.root_path, "pos.metadata")
 		
         #TODO: load POS data stored in root_path into Pos class 
         #
@@ -48,12 +51,14 @@ class Pos:
         #    through self.__add_publisher(found_publisher) 
         #
 		self.__check_version_consistency()
-		self.__scan_root_path()
-
-
-    def __check_version_consistency(self):
-    	pass
-
+		self.__scan_root_path()          '''def __check_version_consistency(self):
+    	pass'''
+		    def __read_metadata(self):        required_pos={}
+        json_data=open(self.metadata_loc)
+        metadata = json.load(json_data)
+        required_pos["pos"] = metadata["subscribe_dataset"]
+        return required_pos
+        	
     def __scan_root_path(self):
     	# if found a valid publisher directory, 
     	# generate a publisher object through 
@@ -68,20 +73,30 @@ class Pos:
     	# current_pos[publisher_id] = publisher_data (publisherObj)
     	# publisher_data[topic_id] = topic_data (topicObj)
     	# topic_data[data_id] = data (dataobj)
+		
+		required_pos_info = __read_metadata()
 
         current_pos = {}
-        # use self.root_path 
-    	for dir_name in dir_names:
-    	   pub_abc = Publisher(dir_name)
-
-    	   self.__add_publisher(pub_abc)
-
+		current_pos["pos"]=[]
+    
+        # use self.root_path         pub_index = os.walk(self.root_path).next()[1]
+		for pub_index, pub_name in enumerate(pub_index) :
+		pub_existed = __is_publisher_existed(pub_name, required_pos_info)            if pub_existed:                pub_id = required_pos_info['pos'][pub_index]['publisher_id']
+    	        pub_abc = Publisher(pub_name, pub_id)
+    	        self.__add_publisher(pub_abc)                print 'found ' + publisher + '\n---\n'
+            else:                print 'not found publisher'
     def __add_publisher(self, found_publisher):
     	if not found_publisher in self.publishers:
     	    self.publishers[found_publisher.get_id()] = found_publisher
 
 	def get_publishers(self):
 		return self.publishers
+		    def __is_publisher_existed(pub_name, r_pos_info):
+        pub_list = [pub for pub in r_pos_info['pos'] if pub['publisher_name'] == pub_name]
+        result = False
+        if len(pub_list) > 0:
+            return True
+        return False
 
 
 
