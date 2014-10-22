@@ -50,7 +50,6 @@ class Publisher:
 	def get_topics(self):
 		pass
 
-
 	def add_topic(self, topic):
 		self.topics[topic.get_topic_id] = topic
 
