@@ -8,10 +8,11 @@ This part of the guide focuses on setting up your environment for TIBS and Gener
 
     guide/install
     guide/quickstart
+    guide/tibs
     guide/pub
     guide/hub
     guide/pos
-    guide/tibs
+    
     
 
 Design Note
@@ -33,7 +34,6 @@ This part of the documentation dedicates to prople who are looking for informati
     api/pub
     api/hub
     api/pos
-    api/tibs
 
 Additional Note
 ---------------
