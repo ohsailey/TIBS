@@ -2,11 +2,14 @@ import os
 import json 
 from pprint import pprint
 
+<<<<<<< HEAD
 #for root, dirs, files in os.walk("./test_root_dir", topdown=False):
     #for name in files:
         #print(os.path.split(os.path.join(root, name))[1])'''
     #for name in dirs:
         #print(os.path.split(os.path.join(root, name))[1])
+=======
+>>>>>>> e2dd68628be5c05012eea4f3c671939ac538ff07
 def __scan_root_path():
     metadata = __read_metadata()
     current_pos = {}
@@ -32,7 +35,11 @@ def __scan_topic_path(topic_layer, data_list):
     existing_data = os.walk(topic_layer).next()[1]
     for data in existing_data:        data_existed = __is_data_existed(data, data_list)
         if data_existed:            data_layer = os.path.join(topic_layer, data)            file_list = data_list["file_list"]            current_files = __scan_data_path(data_layer, file_list)            current_data.append({
+<<<<<<< HEAD
                 "data_name":data,
+=======
+                "data_name":file,
+>>>>>>> e2dd68628be5c05012eea4f3c671939ac538ff07
 			    "data_id":data_list["data_id"],                "file_list":current_files
 			})        else:
 		    print 'not found data'
