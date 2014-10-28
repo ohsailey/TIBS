@@ -24,7 +24,7 @@
 #
 # Author:
 #
-#    Project Manager : Feng-Pu Yabg 
+#    Project Manager : Feng-Pu Yabg
 #    Core Team Member: Bai-Small
 #
 # Project:
@@ -32,24 +32,34 @@
 #    OpenISDM
 #
 # -*-
-
+from topic import Topic
 
 class Publisher:
 
-	def __init__(self, pid, pname):
-		self.id = pid
-		self.name = pname
-		self.topics = {}
+    def __init__(self, pid, pname, topic_list):
+        self.id = pid
+        self.name = pname
+        self.topics=[]
+        self.require_topics = topic_list
 
-	def get_id():
-		return self.id
+        self.add_topic()
+        #self.topic_list =
 
-	def get_name():
-		return self.name
+    def get_id(self):
+        return self.id
 
-	def get_topics(self):
-		pass
+    def get_name(self):
+        return self.name
 
-	def add_topic(self, topic):
-		self.topics[topic.get_topic_id] = topic
+    def get_topics(self):
+        return self.topics
+        #self.topics
+        #pass
+    def add_topic(self):
+        for topic in self.require_topics:
+            topic_abc = Topic(topic["id"], topic["name"], topic["version"],
+                topic["metadata_path"], topic["data_list"])
+            if not topic_abc in self.topics:
+                self.topics.append(topic_abc)
+        #self.topics[topic.get_topic_id] = topic
 

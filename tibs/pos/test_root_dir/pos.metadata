@@ -24,9 +24,9 @@
 "publisher_topics":
 [{"topic_name":"topicA",
   "topic_id":"001",
+  "topic_version":"1.8",
   "topic_data":{
-    "data_name":"data",
-    "data_id":"00A",
+    "data_name":"shelter",
      "file_list":[
      {"file_name":"TWN-100-100201.rdf"},
      {"file_name":"TWN-100-100201.png"}
@@ -34,22 +34,31 @@
   }},
  {"topic_name":"topicB",
   "topic_id":"002",
+  "topic_version":"4.6",
   "topic_data":{
     "data_name":"data",
-    "data_id":"00B",
      "file_list":[
-     {"file_name":"TWN-100-682449.rdf"},
-     {"file_name":"TWN-100-682449.png"}
+     {
+	  "file_name":"TWN-100-682449.rdf"
+	 },
+     {
+	  "file_name":"TWN-100-682449.png"
+	 }
     ]
   }},
  {"topic_name":"topicC",
   "topic_id":"003",
+  "topic_version":"1.0",
   "topic_data":{
     "data_name":"data",
-    "data_id":"00C",
+    "version":"1.0",
      "file_list":[
-     {"file_name":"TWN-103-079985.rdf"},
-     {"file_name":"TWN-103-079985.png"}
+     {
+	  "file_name":"TWN-103-079985.rdf"
+	 },
+     {
+	  "file_name":"TWN-103-079985.png"
+	 }
     ]
   }}
 ]
@@ -60,11 +69,13 @@
 "publisher_topics":
 [{"topic_name":"topicD",
   "topic_id":"004",
+  "topic_version":"1.7",
   "topic_data":{
     "data_name":"data",
-    "data_id":"00D",
      "file_list":[
-     {"file_name":"7-11.csv"}
+     {
+	  "file_name":"7-11.csv"
+	 }
     ]
   }}
 ]
@@ -75,20 +86,24 @@
 "publisher_topics":
 [{"topic_name":"topicE",
   "topic_id":"005",
+  "topic_version":"3.5",
   "topic_data":{
     "data_name":"data",
-    "data_id":"00E",
      "file_list":[
-     {"file_name":"fireStation.json"}
+     {
+	  "file_name":"fireStation.json"
+	 }
     ]
   }},
  {"topic_name":"topicF",
   "topic_id":"006",
+  "topic_version":"2.2",
   "topic_data":{
     "data_name":"data",
-    "data_id":"00F",
-     "file_list":[
-     {"file_name":"Wildlife.wmv"}
+    "file_list":[
+     {
+	  "file_name":"Wildlife.wmv"
+	 }
     ]
   }}
 ]

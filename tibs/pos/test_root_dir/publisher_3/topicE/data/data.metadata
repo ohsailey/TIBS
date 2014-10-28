@@ -1,0 +1,13 @@
+{
+[{"data_id":"00E",
+  "data_name":"data",
+  "data_description":"廣播內容英文節目表，連結網頁提供線上收聽及過去60天節目音檔",
+  "accountability_name":"email_certification",
+  "accountability_description":"XXEE",
+  "file_list":[
+   {"file_name":"fireStation.json",
+    "file_description":"消防局據點資料，格式為JSON"
+   }
+  ]}
+]
+}
