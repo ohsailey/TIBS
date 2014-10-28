@@ -24,15 +24,9 @@
 "publisher_topics":
 [{"topic_name":"topicA",
   "topic_id":"001",
-<<<<<<< HEAD
   "topic_version":"1.8",
   "topic_data":{
     "data_name":"shelter",
-=======
-  "topic_data":{
-    "data_name":"data",
-    "data_id":"00A",
->>>>>>> e2dd68628be5c05012eea4f3c671939ac538ff07
      "file_list":[
      {"file_name":"TWN-100-100201.rdf"},
      {"file_name":"TWN-100-100201.png"}
@@ -40,7 +34,6 @@
   }},
  {"topic_name":"topicB",
   "topic_id":"002",
-<<<<<<< HEAD
   "topic_version":"4.6",
   "topic_data":{
     "data_name":"data",
@@ -51,19 +44,10 @@
      {
 	  "file_name":"TWN-100-682449.png"
 	 }
-=======
-  "topic_data":{
-    "data_name":"data",
-    "data_id":"00B",
-     "file_list":[
-     {"file_name":"TWN-100-682449.rdf"},
-     {"file_name":"TWN-100-682449.png"}
->>>>>>> e2dd68628be5c05012eea4f3c671939ac538ff07
     ]
   }},
  {"topic_name":"topicC",
   "topic_id":"003",
-<<<<<<< HEAD
   "topic_version":"1.0",
   "topic_data":{
     "data_name":"data",
@@ -75,14 +59,6 @@
      {
 	  "file_name":"TWN-103-079985.png"
 	 }
-=======
-  "topic_data":{
-    "data_name":"data",
-    "data_id":"00C",
-     "file_list":[
-     {"file_name":"TWN-103-079985.rdf"},
-     {"file_name":"TWN-103-079985.png"}
->>>>>>> e2dd68628be5c05012eea4f3c671939ac538ff07
     ]
   }}
 ]
@@ -93,7 +69,6 @@
 "publisher_topics":
 [{"topic_name":"topicD",
   "topic_id":"004",
-<<<<<<< HEAD
   "topic_version":"1.7",
   "topic_data":{
     "data_name":"data",
@@ -101,13 +76,6 @@
      {
 	  "file_name":"7-11.csv"
 	 }
-=======
-  "topic_data":{
-    "data_name":"data",
-    "data_id":"00D",
-     "file_list":[
-     {"file_name":"7-11.csv"}
->>>>>>> e2dd68628be5c05012eea4f3c671939ac538ff07
     ]
   }}
 ]
@@ -118,7 +86,6 @@
 "publisher_topics":
 [{"topic_name":"topicE",
   "topic_id":"005",
-<<<<<<< HEAD
   "topic_version":"3.5",
   "topic_data":{
     "data_name":"data",
@@ -126,18 +93,10 @@
      {
 	  "file_name":"fireStation.json"
 	 }
-=======
-  "topic_data":{
-    "data_name":"data",
-    "data_id":"00E",
-     "file_list":[
-     {"file_name":"fireStation.json"}
->>>>>>> e2dd68628be5c05012eea4f3c671939ac538ff07
     ]
   }},
  {"topic_name":"topicF",
   "topic_id":"006",
-<<<<<<< HEAD
   "topic_version":"2.2",
   "topic_data":{
     "data_name":"data",
@@ -145,13 +104,6 @@
      {
 	  "file_name":"Wildlife.wmv"
 	 }
-=======
-  "topic_data":{
-    "data_name":"data",
-    "data_id":"00F",
-     "file_list":[
-     {"file_name":"Wildlife.wmv"}
->>>>>>> e2dd68628be5c05012eea4f3c671939ac538ff07
     ]
   }}
 ]

@@ -24,11 +24,7 @@
 #
 # Author:
 #
-<<<<<<< HEAD
 #    Project Manager : Feng-Pu Yabg
-=======
-#    Project Manager : Feng-Pu Yabg 
->>>>>>> e2dd68628be5c05012eea4f3c671939ac538ff07
 #    Core Team Member: Bai-Small
 #
 # Project:
@@ -37,16 +33,12 @@
 #
 # -*-
 
-<<<<<<< HEAD
 from publisher import Publisher
 import os
-=======
->>>>>>> e2dd68628be5c05012eea4f3c671939ac538ff07
 import json
 
 class Pos:
 
-<<<<<<< HEAD
     def __init__(self, root_path):
 
         self.publishers = []
@@ -74,30 +66,10 @@ class Pos:
         :returns: array<str> -- the array of pos subscriptions.
         '''
         required_pos={}
-=======
-	def __init__(self, root_path):
-
-		self.publishers = {}
-		self.root_path = root_path
-		self.metadata_loc = os.path.join(self.root_path, "pos.metadata")
-		
-        #TODO: load POS data stored in root_path into Pos class 
-        #
-        # 1. check if the data resided in root_path is up-to-date to Hub's
-        #    if not, sync it. 
-        # 2. restore data resided in root_path into this object 
-        #    through self.__add_publisher(found_publisher) 
-        #
-		self.__check_version_consistency()
-		self.__scan_root_path()          '''def __check_version_consistency(self):
-    	pass'''
-		    def __read_metadata(self):        required_pos={}
->>>>>>> e2dd68628be5c05012eea4f3c671939ac538ff07
         json_data=open(self.metadata_loc)
         metadata = json.load(json_data)
         required_pos["pos"] = metadata["subscribe_dataset"]
         return required_pos
-<<<<<<< HEAD
 
     def __scan_root_path(self):
         # if found a valid publisher directory,
@@ -105,20 +77,10 @@ class Pos:
         # self.__add_publisher(found_publisher)
         # stop until walking through the
         # root path.
-=======
-        	
-    def __scan_root_path(self):
-    	# if found a valid publisher directory, 
-    	# generate a publisher object through 
-    	# self.__add_publisher(found_publisher)
-    	# stop until walking through the 
-    	# root path. 
->>>>>>> e2dd68628be5c05012eea4f3c671939ac538ff07
 
         # After scanning the root_dir
         # temp data structure may be
         #-----------------------------
-<<<<<<< HEAD
         # current_pos = {}
         # current_pos[publisher_id] = publisher_data (publisherObj)
         # publisher_data[topic_id] = topic_data (topicObj)
@@ -314,38 +276,12 @@ class Pos:
         return self.publishers
 
     def __is_publisher_existed(self, pub_name, r_pos_info):
-=======
-    	# current_pos = {}
-    	# current_pos[publisher_id] = publisher_data (publisherObj)
-    	# publisher_data[topic_id] = topic_data (topicObj)
-    	# topic_data[data_id] = data (dataobj)
-		
-		required_pos_info = __read_metadata()
-
-        current_pos = {}
-		current_pos["pos"]=[]
-    
-        # use self.root_path         pub_index = os.walk(self.root_path).next()[1]
-		for pub_index, pub_name in enumerate(pub_index) :
-		pub_existed = __is_publisher_existed(pub_name, required_pos_info)            if pub_existed:                pub_id = required_pos_info['pos'][pub_index]['publisher_id']
-    	        pub_abc = Publisher(pub_name, pub_id)
-    	        self.__add_publisher(pub_abc)                print 'found ' + publisher + '\n---\n'
-            else:                print 'not found publisher'
-    def __add_publisher(self, found_publisher):
-    	if not found_publisher in self.publishers:
-    	    self.publishers[found_publisher.get_id()] = found_publisher
-
-	def get_publishers(self):
-		return self.publishers
-		    def __is_publisher_existed(pub_name, r_pos_info):
->>>>>>> e2dd68628be5c05012eea4f3c671939ac538ff07
         pub_list = [pub for pub in r_pos_info['pos'] if pub['publisher_name'] == pub_name]
         result = False
         if len(pub_list) > 0:
             return True
         return False
 
-<<<<<<< HEAD
     def __is_topic_existed(self, topic_name, topic_info):
         topic_list = [topic for topic in topic_info if topic['topic_name'] == topic_name]
         result = False
@@ -366,11 +302,3 @@ class Pos:
             return True
         return False
 
-=======
-
-
-
-
-
-	
->>>>>>> e2dd68628be5c05012eea4f3c671939ac538ff07

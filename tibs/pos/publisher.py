@@ -48,7 +48,6 @@ class Publisher:
     def get_id(self):
         return self.id
 
-<<<<<<< HEAD
     def get_name(self):
         return self.name
 
@@ -63,8 +62,4 @@ class Publisher:
             if not topic_abc in self.topics:
                 self.topics.append(topic_abc)
         #self.topics[topic.get_topic_id] = topic
-=======
-	def add_topic(self, topic):
-		self.topics[topic.get_topic_id] = topic
->>>>>>> e2dd68628be5c05012eea4f3c671939ac538ff07
 
