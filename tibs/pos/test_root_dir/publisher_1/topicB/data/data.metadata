@@ -1,0 +1,16 @@
+{
+[{"data_id":"00B",
+  "data_name":"data",
+  "data_description":"提供繳稅方式適用範圍、適用期間、適用對象、操作程序、納稅人負擔手續費、稅捐處是否另行寄發繳納證明等資訊以維護納稅義務人權益。",
+  "accountability_name":"email_certification",
+  "accountability_description":"XXBB",
+  "file_list":[
+   {"file_name":"TWN-100-682449.rdf",
+    "file_description":"中正區避難所RDF資料"
+   },
+   {"file_name":"TWN-100-682449.png",
+    "file_description":"中正區避難所地圖"
+   }
+  ]}
+]
+}

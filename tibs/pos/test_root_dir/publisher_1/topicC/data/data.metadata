@@ -1,0 +1,16 @@
+{
+[{"data_id":"00C",
+  "data_name":"data",
+  "data_description":"廣播內容英文節目表，連結網頁提供線上收聽及過去60天節目音檔",
+  "accountability_name":"email_certification",
+  "accountability_description":"XXCC",
+  "file_list":[
+   {"file_name":"TWN-103-079985.rdf",
+    "file_description":"大同區避難所RDF資料"
+   },
+   {"file_name":"TWN-103-079985.png",
+    "file_description":"大同區避難所地圖"
+   }
+  ]}
+]
+}

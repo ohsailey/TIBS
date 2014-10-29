@@ -1,0 +1,16 @@
+{
+ "data":
+ [{"data_id":"00A",
+  "data_name":"data",
+  "data_description":"生活中所遇到難分類的垃圾，提供快速的查詢讓民眾知道該如何垃圾分類及何時有回收",
+  "accountability_name":"email_certification",
+  "accountability_description":"XXAA",
+  "file_list":[
+   {"file_name":"TWN-100-100201.rdf",
+    "file_description":"中正區避難所RDF資料"
+   },
+   {"file_name":"TWN-100-100201.png",
+    "file_description":"中正區避難所地圖"
+   }
+  ]}]
+}
