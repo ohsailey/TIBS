@@ -46,7 +46,8 @@ class Topic:
 
 	def get_name(self):
 		pass
-
+    
+    #next iteration
     def get_tags(self):
     	pass
 

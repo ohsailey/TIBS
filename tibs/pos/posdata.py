@@ -35,19 +35,26 @@
 
 class PosData:
 
-	def __init__(self):
+	def __init__(self, name, id, desc, acc):
 		pass
 
-    def get_id():
+    def get_id(self):
         pass
 
-	def get_accountability():
+    def get_name(self):
+    	pass
+
+    def get_description(self):
+    	pass
+
+
+	def get_accountability(self):
 		pass
 
-	def get_content():
+	def get_content(self):
 		content = {}
 
-		if (self.check_accountiability()):
+		if (self.__check_accountiability()):
 			content['status'] = True
 			content['data'] = 'temporary access path or \
 		                       serialized content'
@@ -57,12 +64,12 @@ class PosData:
 
 		return content 
 
-	def check_accountiability():
+	def __check_accountiability(self):
 		
 		self.__log_accountiability()
 		#if sucess return True, else return False
 		return True
 
-	def __log_accountiability():
+	def __log_accountiability(self):
 		pass
 		
